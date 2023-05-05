@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Kategoriberita;
+use App\KategoriBerita;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Carbon\Carbon;
