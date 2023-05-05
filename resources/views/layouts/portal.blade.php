@@ -61,17 +61,29 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item ">
-                <a class="nav-link {{ Nav::isRoute('portal.kategori-publikasi.index') }}"
-                    href="{{ route('portal.kategori-publikasi.index') }}">
-                    <span class="fas fa-fw fa-bars"></span>
-                    <span class="sidenav-normal"> Kategori Publikasi </span>
-                </a>
-            </li>
-            <li class="nav-item ">
                 <a class="nav-link {{ Nav::isRoute('admin.publikasi.index') }}"
                     href="{{ route('portal.publikasi.index') }}">
                     <span class="fas fa-fw fa-bars"></span>
                     <span class="sidenav-normal"> Publikasi </span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.berita.index') }}" href="{{ route('portal.berita.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal"> Berita </span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.galeri.index') }}" href="{{ route('portal.galeri.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal"> Galeri </span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('portal.kategori-publikasi.index') }}"
+                    href="{{ route('portal.kategori-publikasi.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal"> Kategori Publikasi </span>
                 </a>
             </li>
             <li class="nav-item ">
@@ -82,22 +94,10 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link {{ Nav::isRoute('admin.berita.index') }}" href="{{ route('portal.berita.index') }}">
-                    <span class="fas fa-fw fa-bars"></span>
-                    <span class="sidenav-normal"> Berita </span>
-                </a>
-            </li>
-            <li class="nav-item ">
                 <a class="nav-link {{ Nav::isRoute('admin.kategori-galeri.index') }}"
                     href="{{ route('portal.kategori-galeri.index') }}">
                     <span class="fas fa-fw fa-bars"></span>
                     <span class="sidenav-normal"> Kategori Galeri </span>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link {{ Nav::isRoute('admin.galeri.index') }}" href="{{ route('portal.galeri.index') }}">
-                    <span class="fas fa-fw fa-bars"></span>
-                    <span class="sidenav-normal"> Galeri </span>
                 </a>
             </li>
 
