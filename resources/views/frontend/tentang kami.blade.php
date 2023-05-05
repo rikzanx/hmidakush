@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-5">
-          <img class="logo-kami" src="{{ asset('img/logo.png')}}" alt="" />
+          <img class="logo-kamu" src="{{ asset('img/logo.png')}}" alt="" />
         </div>
         <div class="col-lg-7" style="padding-right:50px ;">
           <p class="section-title pr-5">
