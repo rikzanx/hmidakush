@@ -73,7 +73,7 @@
         <a href="{{ route('index') }}" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
           style="font-size: 40px; line-height: 40px">
           <!-- <i class="flaticon-043-teddy-bear"></i> -->
-          <img src="img/logo.png" alt="" width="50" height="50">
+          <img src="{{ asset('img/logo.png') }}" alt="" width="50" height="50">
           <span class="text-white">HMI</span>
         </a>
         <p style="text-align:justify;">
