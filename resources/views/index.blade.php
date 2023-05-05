@@ -58,7 +58,7 @@
             </ul>
           </div>
         </div>
-        <a href="" class="btn btn-primary mt-2 py-2 px-4">Selengkapnya</a>
+        <a href="{{ route('tentang kami') }}" class="btn btn-primary mt-2 py-2 px-4">Selengkapnya</a>
       </div>
     </div>
   </div>
