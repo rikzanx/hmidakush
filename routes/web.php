@@ -54,6 +54,9 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::resource('portal/kategori-galeri', 'KategoriGaleriController', [
         'as' => 'portal'
     ]);
+    Route::resource('portal/profil','UserProfilController',[
+        'as'=>'portal'
+    ]);
 });
 
 /*------------------------------------------
