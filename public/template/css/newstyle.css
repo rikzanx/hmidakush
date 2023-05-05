@@ -73,3 +73,9 @@
 .kategori-filter > li.active > a:hover{
     color: #2E8B57 !important;
 }
+.logo-kami {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 0 !important;
+  }
