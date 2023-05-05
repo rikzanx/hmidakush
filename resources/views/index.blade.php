@@ -133,7 +133,7 @@
       @endforeach
     </div>
     <div class="row mb-4">
-      <a href="" class="btn btn-secondary px-4 py-2 mx-auto my-2">Lihat semua publikasi</a>
+      <a href="{{ route('publikasi') }}" class="btn btn-secondary px-4 py-2 mx-auto my-2">Lihat semua publikasi</a>
     </div>
   </div>
 </div>
@@ -171,7 +171,7 @@
       @endforeach
     </div>
     <div class="row mb-4">
-      <a href="" class="btn btn-secondary px-4 py-2 mx-auto my-2">Lihat semua Berita</a>
+      <a href="{{ route('berita') }}" class="btn btn-secondary px-4 py-2 mx-auto my-2">Lihat semua Berita</a>
     </div>
   </div>
 </div>
