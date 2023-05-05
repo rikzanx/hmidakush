@@ -11,12 +11,12 @@ class PublikasiController extends Controller
     public function index(Request $request)
     {
         $kategori_list = KategoriPublikasi::get();
-        $publikasi_list = Publikasi::with("kategori")->paginate(3);
+        $publikasi_list = Publikasi::with("kategori","komentar")->paginate(3);
         // dd($publikasi_list);
         $kategori = "Semua";
         if ($request->has('kategori')) {
             $kategori_opt = KategoriPublikasi::where('nama_kategori', $request->kategori)->firstOrFail();
-            $publikasi_list = Publikasi::where("kategori_publikasi_id", $kategori_opt->id)->paginate(3);
+            $publikasi_list = Publikasi::with("kategori","komentar")->where("kategori_publikasi_id", $kategori_opt->id)->paginate(3);
             $kategori = $request->kategori;
         }
         // dd($publikasi_list);
@@ -28,7 +28,7 @@ class PublikasiController extends Controller
     }
     public function detail($slug)
     {
-        $publikasi = Publikasi::with("kategori")->where('slug', $slug)->firstOrFail();
+        $publikasi = Publikasi::with("kategori","komentar","user")->where('slug', $slug)->firstOrFail();
         $publikasi_terkait = Publikasi::with("kategori")->where('slug', '!=', $slug)->limit(3)->get();
         $publikasi_terbaru = Publikasi::with("kategori")->where('slug', '!=', $slug)->orderBy('tanggal_rilis', 'DESC')->first();
         // dd($publikasi_terbaru);

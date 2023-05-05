@@ -37,4 +37,8 @@ class Berita extends Model
     {
         return $this->hasOne('App\KategoriBerita', 'id', 'kategori_berita_id');
     }
+    public function komentar()
+    {
+        return $this->hasMany('App\KomentarBerita', 'berita_id');
+    }
 }

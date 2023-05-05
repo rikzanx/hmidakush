@@ -33,22 +33,35 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('portal', 'HomeController@index')->name('home');
     Route::get('portal/profile', 'ProfileController@index')->name('profile');
     Route::put('portal/profile', 'ProfileController@update')->name('profile.update');
-    Route::resource('portal/galeri', 'AdminGaleriController', [
+    Route::resource('portal/publikasi', 'AdminPublikasiController', [
         'as' => 'portal'
     ]);
-
     Route::resource('portal/berita', 'AdminBeritaController', [
         'as' => 'portal'
     ])->parameters([
         'berita' => 'berita'
     ]);
+    Route::resource('portal/galeri', 'AdminGaleriController', [
+        'as' => 'portal'
+    ]);
+
+    Route::resource('portal/mypublikasi', 'AdminMyPublikasiController', [
+        'as' => 'portal'
+    ]);
+    Route::resource('portal/myberita', 'AdminMyBeritaController', [
+        'as' => 'portal'
+    ])->parameters([
+        'berita' => 'berita'
+    ]);
+    Route::resource('portal/mygaleri', 'AdminMyGaleriController', [
+        'as' => 'portal'
+    ]);
+
+
     Route::resource('portal/kategori-publikasi', 'AdminKategoriPublikasiController', [
         'as' => 'portal'
     ]);
     Route::resource('portal/kategori-berita', 'AdminKategoriBeritaController', [
-        'as' => 'portal'
-    ]);
-    Route::resource('portal/publikasi', 'AdminPublikasiController', [
         'as' => 'portal'
     ]);
     Route::resource('portal/kategori-galeri', 'KategoriGaleriController', [
@@ -88,5 +101,6 @@ Route::get('publikasi/{slug}', 'PublikasiController@detail')->name('publikasi.de
 Route::get('berita', 'BeritaController@index')->name('berita');
 Route::get('berita/{slug}', 'BeritaController@detail')->name('berita.detail');
 Route::get('galeri', 'GaleriController@index')->name('galeri');
-// Route::get('/portal/publikasi/tambah', 'AdminPublikasiController@index');
-// Route::get('/publikasi/edit/{id}', 'AdminPublikasiController@edit');
+
+Route::post('komentar/publikasi/{id}/upload','KomentarPublikasiController@upload')->name('komentar.publikasi.upload');
+Route::post('komentar/berita/{id}/upload','KomentarBeritaController@upload')->name('komentar.berita.upload');

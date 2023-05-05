@@ -37,4 +37,8 @@ class Publikasi extends Model
     {
         return $this->hasOne('App\KategoriPublikasi', 'id', 'kategori_publikasi_id');
     }
+    public function komentar()
+    {
+        return $this->hasMany('App\KomentarPublikasi', 'publikasi_id');
+    }
 }

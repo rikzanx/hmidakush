@@ -53,7 +53,7 @@
           <div class="d-flex justify-content-center mb-3">
             <small class="mr-3"><i class="fa fa-calendar text-primary"></i> {{ $p->tanggal_rilis }}</small>
             <small class="mr-3"><i class="fa fa-tag text-primary"></i> {{ $p->kategori->nama_kategori }}</small>
-            <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+            <small class="mr-3"><i class="fa fa-comments text-primary"></i> {{count($p->komentar)}}</small>
           </div>
           <p class="card-text">
             {{ substr($p->deskripsi,0,101) }}...

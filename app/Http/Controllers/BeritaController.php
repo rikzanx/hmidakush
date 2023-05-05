@@ -11,11 +11,11 @@ class BeritaController extends Controller
     public function index(Request $request)
     {
         $kategori_list = KategoriBerita::get();
-        $berita_list = Berita::with("kategori")->paginate(3);
+        $berita_list = Berita::with("kategori","komentar")->paginate(3);
         $kategori = "Semua";
         if ($request->has('kategori')) {
             $kategori_opt = KategoriBerita::where('nama_kategori', $request->kategori)->firstOrFail();
-            $berita_list = berita::where("kategori_berita_id", $kategori_opt->id)->paginate(3);
+            $berita_list = Berita::with("kategori","komentar")->where("kategori_berita_id", $kategori_opt->id)->paginate(3);
             $kategori = $request->kategori;
         }
         // dd($berita_list);
@@ -27,7 +27,7 @@ class BeritaController extends Controller
     }
     public function detail($slug)
     {
-        $berita = Berita::with("kategori")->where('slug', $slug)->firstOrFail();
+        $berita = Berita::with("kategori","komentar","user")->where('slug', $slug)->firstOrFail();
         $berita_terkait = Berita::with("kategori")->where('slug', '!=', $slug)->limit(3)->get();
         $berita_terbaru = Berita::with("kategori")->where('slug', '!=', $slug)->orderBy('tanggal_rilis', 'DESC')->first();
         // dd($berita_terbaru);

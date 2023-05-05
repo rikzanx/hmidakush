@@ -53,7 +53,29 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Postingan
+            </div>
 
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.mypublikasi.index') }}"
+                    href="{{ route('portal.mypublikasi.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal"> Publikasi Saya</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.myberita.index') }}" href="{{ route('portal.myberita.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal"> Berita Saya</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.mygaleri.index') }}" href="{{ route('portal.mygaleri.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal"> Galeri Saya</span>
+                </a>
+            </li>
             <!-- Heading -->
             <div class="sidebar-heading">
                 Managemen Data

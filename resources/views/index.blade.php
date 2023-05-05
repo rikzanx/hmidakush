@@ -124,8 +124,9 @@
           <div class="card-body bg-light text-center px-3 py-2">
             <h6 class="heading-article">{{ $p->judul }}</h6>
             <div class="d-flex justify-content-center">
-              <small class="mr-1"><i class="fa fa-calendar text-primary"></i>{{ $p->tanggal_rilis }}</small>
-              <small class="mr-1"><i class="fa fa-tag text-primary"></i>{{ $p->kategori->nama_kategori }}</small>
+              <small class="mr-1"><i class="fa fa-calendar text-primary"></i> {{ $p->tanggal_rilis }}</small>
+              <small class="mr-1"><i class="fa fa-tag text-primary"></i> {{ $p->kategori->nama_kategori }}</small>
+              <small class="mr-1"><i class="fa fa-comment text-primary"></i> {{ count($p->komentar) }}</small>
             </div>
           </div>
         </div>
@@ -162,8 +163,9 @@
           <div class=" card-body bg-light text-center px-3 py-2">
             <h6 class="heading-article">{{ $p->judul }}</h6>
             <div class="d-flex justify-content-center">
-              <small class="mr-1"><i class="fa fa-calendar text-primary"></i>{{ $p->tanggal_rilis }}</small>
-              <small class="mr-1"><i class="fa fa-tag text-primary"></i>{{ $p->kategori->nama_kategori }}</small>
+              <small class="mr-1"><i class="fa fa-calendar text-primary"></i> {{ $p->tanggal_rilis }}</small>
+              <small class="mr-1"><i class="fa fa-tag text-primary"></i> {{ $p->kategori->nama_kategori }}</small>
+              <small class="mr-1"><i class="fa fa-comment text-primary"></i> {{ count($p->komentar) }}</small>
             </div>
           </div>
         </div>

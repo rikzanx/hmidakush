@@ -27,6 +27,6 @@ class CreateKategoriPublikasisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori_publikasis');
+        Schema::dropIfExists('kategori_publikasi');
     }
 }

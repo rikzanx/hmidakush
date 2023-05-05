@@ -33,6 +33,6 @@ class CreateBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('beritas');
+        Schema::dropIfExists('berita');
     }
 }

@@ -33,6 +33,6 @@ class CreatePublikasisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publikasis');
+        Schema::dropIfExists('publikasi');
     }
 }

@@ -15,7 +15,10 @@
           <p class="mr-3">
             <i class="fa fa-tag text-primary"></i> {{ $berita->kategori->nama_kategori}}
           </p>
-          <p class="mr-3"><i class="fa fa-Ulasan text-primary"></i> 15</p>
+          <p class="mr-3">
+            <i class="fa fa-comment text-primary"></i> {{ count($berita->komentar)}}
+          </p>
+          <p class="mr-3"><i class="fa fa-Ulasan text-primary"></i>Penulis : {{ $berita->user->nama }}</p>
         </div>
       </div>
       <div class="mb-5">
@@ -70,72 +73,41 @@
 
       <!-- Comment List -->
       <div class="mb-5">
-        <h2 class="mb-4">3 Ulasan</h2>
-        <div class="media mb-4">
-          <img src="img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px" />
-          <div class="media-body">
-            <h6>
-              John Doe <small><i>01 Jan 2045 at 12:00pm</i></small>
-            </h6>
-            <p>
-              Diam amet duo labore stet elitr ea clita ipsum, tempor labore
-              accusam ipsum et no at. Kasd diam tempor rebum magna dolores
-              sed sed eirmod ipsum. Gubergren clita aliquyam consetetur
-              sadipscing, at tempor amet ipsum diam tempor consetetur at
-              sit.
-            </p>
-            <button class="btn btn-sm btn-light">Reply</button>
-          </div>
-        </div>
-        <div class="media mb-4">
-          <img src="img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px" />
-          <div class="media-body">
-            <h6>
-              John Doe <small><i>01 Jan 2045 at 12:00pm</i></small>
-            </h6>
-            <p>
-              Diam amet duo labore stet elitr ea clita ipsum, tempor labore
-              accusam ipsum et no at. Kasd diam tempor rebum magna dolores
-              sed sed eirmod ipsum. Gubergren clita aliquyam consetetur
-              sadipscing, at tempor amet ipsum diam tempor consetetur at
-              sit.
-            </p>
-            <button class="btn btn-sm btn-light">Reply</button>
-            <div class="media mt-4">
-              <img src="img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px" />
+        <h2 class="mb-4">{{count($berita->komentar)}} Komentar</h2>
+        @if (count($berita->komentar)>0)
+          @foreach ($berita->komentar as $item) 
+            <div class="media mb-4">
               <div class="media-body">
                 <h6>
-                  John Doe <small><i>01 Jan 2045 at 12:00pm</i></small>
+                  {{  $item->nama}} <small><i>{{ $item->created_at}}</i></small>
                 </h6>
                 <p>
-                  Diam amet duo labore stet elitr ea clita ipsum, tempor
-                  labore accusam ipsum et no at. Kasd diam tempor rebum
-                  magna dolores sed sed eirmod ipsum. Gubergren clita
-                  aliquyam consetetur, at tempor amet ipsum diam tempor at
-                  sit.
+                  {{ $item->komentar }}
                 </p>
-                <button class="btn btn-sm btn-light">Reply</button>
               </div>
             </div>
-          </div>
-        </div>
+          @endforeach            
+        @else
+            <p>Tidak ada komentar</p>
+        @endif
       </div>
 
       <!-- Comment Form -->
       <div class="bg-light p-5">
         <h2 class="mb-4">Tinggalkan komentar</h2>
-        <form>
+        <form action="{{ route('komentar.berita.upload',$berita->id) }}" method="POST">
+          @csrf
           <div class="form-group">
             <label for="name">Nama *</label>
-            <input type="text" class="form-control" id="name" />
+            <input type="text" class="form-control" id="name" name="nama"  required/>
           </div>
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" class="form-control" id="email" />
+            <input type="email" class="form-control" id="email" name="email"  required/>
           </div>
           <div class="form-group">
-            <label for="message">Pesan *</label>
-            <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+            <label for="message">Komentar *</label>
+            <textarea id="message" name="komentar" cols="30" rows="5" class="form-control" required></textarea>
           </div>
           <div class="form-group mb-0">
             <input type="submit" value="Leave Comment" class="btn btn-primary px-3" />

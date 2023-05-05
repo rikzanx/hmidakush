@@ -27,6 +27,6 @@ class CreateKategoriBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori_beritas');
+        Schema::dropIfExists('kategori_berita');
     }
 }
