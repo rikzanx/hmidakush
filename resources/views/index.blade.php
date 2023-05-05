@@ -112,7 +112,7 @@
     <div class="row">
       @foreach ($publikasi_list as $p)
       <div class="col-lg-3 mb-4">
-        <div class="card border-0 shadow-lg mb-2" onclick="location.href='{{ route('detail') }}'">
+        <div class="card border-0 shadow-lg mb-2" onclick="location.href='{{route('publikasi.detail',$p->slug)}}'">
           <div class="pdf-thumb-box-overlay">
             <span class="fa-stack fa-lg">
               <i class="fa fa-square-o fa-stack-2x pdf-thumb-square"></i>
@@ -150,7 +150,7 @@
     <div class="row">
       @foreach ($berita_list as $p)
       <div class="col-lg-3 mb-4">
-        <div class="card border-0 shadow-lg mb-2" onclick="location.href='#'">
+        <div class="card border-0 shadow-lg mb-2" onclick="location.href='{{route('berita.detail',$p->slug)}}'">
           <div class="pdf-thumb-box-overlay">
             <span class="fa-stack fa-lg">
               <i class="fa fa-square-o fa-stack-2x pdf-thumb-square"></i>

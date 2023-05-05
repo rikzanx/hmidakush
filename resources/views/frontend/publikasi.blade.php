@@ -47,7 +47,7 @@
       <div class="card border-0 bg-light shadow-sm pb-2">
         <img class="card-img-top mb-2" style="height: 200px;min-height:200px;" src="{{ asset($p->gambar) }}" alt="" />
         <div class="card-body text-center">
-          <a href="{{route('detail')}}">
+          <a href="{{route('publikasi.detail',$p->slug)}}">
             <h5>{{ $p->judul }}</h5>
           </a>
           <div class="d-flex justify-content-center mb-3">
