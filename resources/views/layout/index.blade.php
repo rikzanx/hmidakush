@@ -70,7 +70,7 @@
   <div class="container-fluid bg-secondary text-white mt-0 py-5 px-sm-3 px-md-5">
     <div class="row pt-5">
       <div class="col-lg-3 col-md-6 mb-5">
-        <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+        <a href="{{ route('index') }}" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
           style="font-size: 40px; line-height: 40px">
           <!-- <i class="flaticon-043-teddy-bear"></i> -->
           <img src="img/logo.png" alt="" width="50" height="50">
