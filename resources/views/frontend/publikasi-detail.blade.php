@@ -24,7 +24,7 @@
       <div class="mb-5">
         <img class="img-fluid rounded w-100 mb-4" src="{{ asset($publikasi->gambar) }}" alt="Image" />
         <p>
-          {{ $publikasi->deskripsi }}
+          {!! $publikasi->deskripsi !!}
         </p>
 
       </div>

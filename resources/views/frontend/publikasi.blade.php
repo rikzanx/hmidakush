@@ -56,7 +56,8 @@
             <small class="mr-3"><i class="fa fa-comments text-primary"></i> {{count($p->komentar)}}</small>
           </div>
           <p class="card-text">
-            {{ substr($p->deskripsi,0,101) }}...
+            <?php $text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>'; ?>
+            {{ substr(str_replace("&nbsp;"," ",strip_tags($p->deskripsi)),0,101) }}...
           </p>
         </div>
         <a href="{{route('publikasi.detail',$p->slug)}}" class="btn btn-primary px-4 mx-auto mb-4">Baca Lebih

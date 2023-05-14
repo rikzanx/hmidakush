@@ -75,25 +75,22 @@
             <span class="px-2">Sambutan</span>
           </p>
         </div>
-        <h1 class="text-white">Muhammad Rikzan</h1>
-        <p class="mb-4 text-white">- Ketua Umum HMI</p>
+        <h1 class="text-white">M Iqbal Dzulkarnain</h1>
+        <p class="mb-4 text-white">- formateur HMI Komisariat Dakwah-Ushuluddin cabang Kudus</p>
         <p class="text-white">
           Assalamualaikum Wr Wb
           <br>
-          Teman-teman sehimpun secita selamat datang di website HMI Komfakda, HMI Komfakda disini berusaha menjadi
-          leading point dalam hal menjawab tantangan zaman bagi komisariat lain dan juga berikhtiar untuk memberikan
-          kemudahan mengakses segala informasi yang berkaitan dengan HMI Komfakda, harapannya website kami ini bisa
-          terus dikembangkan dan senantiasa bermanfaat bagi banyak orang, semoga kedepannya HMI Komfakda bisa menjadi
-          Komisariat yang terus bisa menjadi pionir dalam berbagai hal yang mampu memperteguh perkaderan. Mengabdi
-          Untuk Umat, Berkarya Untuk Bangsa.
+          Selamat datang untuk para pengunjung di website HMI komisariat Dakwah-Ushuluddin 
+          cabang Kudus, adanya website ini merupakan bentuk realisasi visi komisariat HMI 
+          dakwah suludin untuk menjadikan organisasi yang dapat adaptif terhadap perkembangan 
+          zaman. Website ini akan mengakomodir segala informasi tentang kegiatan komisariat dakwah Ushuluddin cabang Kudus, yang mana  disini juga tempat menuangkan kreativitas dari kader-kader terbaik komisariat HMI dakwah usuludin. Harapannya untuk menopang masa depan yang memiliki keberadaban yang inklusif HMI dapat mewarnai tata nilai yang menopang perkembangan zaman melalui kawah Candradimuka yang melahirkan kader-kader yang memiliki semangat keislaman & Keindonesiaan yang tentunya sadar akan perang dan tanggung jawab sebagai kader umat & bangsa.
           <br>
-          YAKUSA!!!
         </p>
 
       </div>
       <div class="col-lg-5">
         <img class="img-fluid rounded mb-5 mb-lg-0"
-          src="https://www.kammi.id/assets/img/umum/ketum/ec58045d7e5bc452386e9f47506a35cc.png" alt="" />
+          src="{{ asset('img/foto_sambutan2.png') }}" alt="" />
       </div>
 
     </div>

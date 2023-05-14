@@ -50,6 +50,7 @@
           <a href="{{ route('publikasi') }}" class="nav-item nav-link  {{ Nav::isRoute('publikasi') }}">Publikasi</a>
           <a href="{{ route('berita') }}" class="nav-item nav-link  {{ Nav::isRoute('berita') }}">Berita</a>
           <a href="{{ route('galeri') }}" class="nav-item nav-link  {{ Nav::isRoute('galeri') }}">Galeri</a>
+          <a href="{{ route('struktur-kepengurusan') }}" class="nav-item nav-link  {{ Nav::isRoute('struktur-kepengurusan') }}">Struktur Kepengurusan</a>
         </div>
         @if (Route::has('login'))
         <div class="top-right links">

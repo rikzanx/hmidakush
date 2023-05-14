@@ -51,8 +51,16 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+            <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.kepengurusan.index') }}"
+                    href="{{ route('admin.kepengurusan.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal">Struktur Kepengurusan</span>
+                </a>
+            </li>
 
             <!-- Divider -->
+            
             <hr class="sidebar-divider">
 
             <!-- Heading -->

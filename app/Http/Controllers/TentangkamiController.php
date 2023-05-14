@@ -11,5 +11,10 @@ class TentangkamiController extends Controller
         return view('frontend.tentang kami');
     }
 
+    public function struktur()
+    {
+        return view('frontend.struktur-kepengurusan');
+    }
+
     
 }

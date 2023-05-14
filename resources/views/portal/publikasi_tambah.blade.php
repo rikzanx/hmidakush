@@ -45,9 +45,13 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Deskripsi</label>
+                    <textarea name="deskripsi" id="editor" cols="30" rows="10"></textarea>
+                </div>
+                {{-- <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Deskripsi</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="deskripsi"
                         placeholder="Isi Deskripsi Artikel .." rows="3"></textarea>
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="kategori_publikasi_id">Pilih Kategori Artikel :</label>
                     <select id="kategori_publikasi_id" name="kategori_publikasi_id" class="form-control">
@@ -74,5 +78,20 @@
 @endsection
 
 @section('script')
+<script src="{{ asset('ckeditor/ckeditor.js')}}"></script>
+<script>
+    ClassicEditor.create( document.querySelector( '#editor' ), {
+            ckfinder: {
+                uploadUrl: '{{ route('upload.foto.publikasi').'?_token='.csrf_token() }}',
+            }
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
 
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script>
 @endsection

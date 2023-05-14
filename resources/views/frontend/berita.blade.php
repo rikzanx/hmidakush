@@ -55,7 +55,7 @@
             <small class="mr-3"><i class="fa fa-comments text-primary"></i> {{ count($p->komentar) }}</small>
           </div>
           <p class="card-text">
-            {{ substr($p->deskripsi,0,101) }}...
+            {{ substr(str_replace("&nbsp;"," ",strip_tags($p->deskripsi)),0,101) }}...
           </p>
         </div>
         <a href="{{route('berita.detail',$p->slug)}}" class="btn btn-primary px-4 mx-auto mb-4">Baca Lebih Lengkap</a>

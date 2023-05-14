@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Deskripsi</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="deskripsi"
+                    <textarea class="form-control" id="editor" name="deskripsi"
                         placeholder="Isi Deskripsi Artikel .." rows="5">{{ $berita->deskripsi }}</textarea>
                 </div>
                 <div class="form-group">
@@ -78,5 +78,20 @@
 @endsection
 
 @section('script')
+<script src="{{ asset('ckeditor/ckeditor.js')}}"></script>
+<script>
+    ClassicEditor.create( document.querySelector( '#editor' ), {
+            ckfinder: {
+                uploadUrl: '{{ route('upload.foto.berita').'?_token='.csrf_token() }}',
+            }
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
 
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script>
 @endsection

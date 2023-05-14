@@ -63,5 +63,10 @@ class DatabaseSeeder extends Seeder
             'judul' => 'judul',
             'gambar' => 'foto/galeri/default.png',
         ]);
+        DB::table('kepengurusans')->insert([
+            'periode' => "2022/2023",
+            'konten' => 'judul',
+        ]);
+
     }
 }
