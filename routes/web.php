@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminKategoriPublikasiController;
 use App\Http\Controllers\KategoriGaleriController;
 use App\Http\Controllers\AdminBeritaController;
 use App\Http\Controllers\AdminGaleriController;
+use App\Http\Controllers\TentangKamiController;
 use App\KategoriPublikasi;
 use App\KategoriBerita;
 use App\KategoriGaleri;
@@ -104,8 +105,7 @@ Route::get('publikasi/{slug}', 'PublikasiController@detail')->name('publikasi.de
 Route::get('berita', 'BeritaController@index')->name('berita');
 Route::get('berita/{slug}', 'BeritaController@detail')->name('berita.detail');
 Route::get('galeri', 'GaleriController@index')->name('galeri');
-Route::get('struktur-kepengurusan','TentangKamiController@struktur')->name('struktur-kepengurusan');
-
+Route::get('struktur-kepengurusan','TentangkamiController@struktur')->name('struktur-kepengurusan');
 Route::post('komentar/publikasi/{id}/upload','KomentarPublikasiController@upload')->name('komentar.publikasi.upload');
 Route::post('komentar/berita/{id}/upload','KomentarBeritaController@upload')->name('komentar.berita.upload');
 Route::post('upload_foto_publikasi','AdminPublikasiController@uploadImage')->name('upload.foto.publikasi');
