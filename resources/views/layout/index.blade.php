@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <title>Website HMI - Himpunan Mahasiswa Islam</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="Free HTML Templates" name="keywords" />
-  <meta content="Free HTML Templates" name="description" />
+  <meta content="HMI - Himpunan Mahasiswa Islam" name="keywords" />
+  <meta content="Website HMI Komisariat DAKWAH-USHULLUDDIN, website ini bermaksud menjadi sarana untuk bersilahturahmi, sarana publikasi dan juga media informasi." name="description" />
 
   <!-- Favicon -->
   <link href="{{ asset('template/img/logo.png')}}" rel="icon" />
