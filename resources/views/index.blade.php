@@ -90,7 +90,7 @@
       </div>
       <div class="col-lg-5">
         <img class="img-fluid rounded mb-5 mb-lg-0"
-          src="{{ asset('img/foto_sambutan2.png') }}" alt="" />
+          src="https://raw.githubusercontent.com/rikzanx/hmidakush/master/public/img/foto_sambutan2.png" alt="" />
       </div>
 
     </div>
