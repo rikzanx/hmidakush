@@ -14,5 +14,5 @@
   </div>
   <!-- Header End -->
 
-  <img style= "width:100%;" class="foto-struktural" src="https://raw.githubusercontent.com/rikzanx/hmidakush/master/public/img/struktur-kepengurursan-2023-2024.jpg">
+  <img style= "width:100%;" class="foto-struktural" src="{{ asset('img/struktur-kepengurursan-2023-2024.jpg') }}">
 @endsection
