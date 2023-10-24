@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Kepengurusan;
 
 class AdminKepengurusanController extends Controller
 {
@@ -13,6 +14,7 @@ class AdminKepengurusanController extends Controller
      */
     public function index()
     {
+        
         return view('admin.kepengurusan');
     }
 

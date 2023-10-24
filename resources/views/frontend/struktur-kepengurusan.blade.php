@@ -21,5 +21,7 @@
       </div>
     </div>
   </div>
+
+  <img style="width:100%;" class="foto-struktural" src="https://raw.githubusercontent.com/rikzanx/hmidakush/a221157c7ff4e6e7ca8c4a1b049864ff8143cf37/public/img/struktur-kepengurursan-2023-2024.jpg">
   <!-- Header End -->
 @endsection
