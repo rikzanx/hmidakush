@@ -5,15 +5,6 @@
   <div class="container-fluid bg-primary">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 100px">
       <h3 class="display-4 font-weight-bold text-white">Struktur Kepengurusan</h3>
-      <h3 class="text-white">
-        HIMPUNAN MAHASISWA ISLAM
-      </h3>
-      <h3 class="text-white">
-        Komisariat Dakwah-Ushuludin
-      </h3>
-      <h3 class="text-white">
-        Periode 2023/2024
-      </h3>
       <div class="d-inline-flex text-white">
         <p class="m-0"><a class="text-white" href="">Home</a></p>
         <p class="m-0 px-2">/</p>
@@ -21,7 +12,7 @@
       </div>
     </div>
   </div>
-
-  <img style="width:100%;" class="foto-struktural" src="https://raw.githubusercontent.com/rikzanx/hmidakush/master/public/img/struktur-kepengurursan-2023-2024.jpg">
   <!-- Header End -->
+
+  <img style= "width:100%;" class="foto-struktural" src="https://raw.githubusercontent.com/rikzanx/hmidakush/master/public/img/struktur-kepengurursan-2023-2024.jpg">
 @endsection
