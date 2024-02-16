@@ -25,7 +25,7 @@
           @foreach ($kategori_list as $item)
           @if ($kategori == $item->nama_kategori)
             <a class=" btn btn-outline-primary m-1 active"
-            href="{{ route('galeri') }}?kategori={{urlencode($item->nama_kategori)}}">{{
+            href="{{ route('galeri') }}?kategori={{urlencode( str_replace('&', '%26',$item->nama_kategori) ) }}">{{
             $item->nama_kategori }}</a>
           @else
           <a class="btn btn-outline-primary m-1" href=" {{ route('galeri') }}?kategori={{$item->nama_kategori}}">{{
