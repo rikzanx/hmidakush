@@ -14,7 +14,7 @@ class GaleriController extends Controller
         $galeri_list = Galeri::with("kategori")->paginate(9);
         $kategori = "Semua";
         if ($request->has('kategori')) {
-            dd(urldecode($request->kategori));
+            dd(urldecode($request->all()));
             $kategori_opt = KategoriGaleri::where('nama_kategori', urldecode($request->kategori))->firstOrFail();
             $galeri_list = Galeri::where("kategori_galeri_id", $kategori_opt->id)->paginate(9);
             $kategori = $request->kategori;
