@@ -166,7 +166,7 @@
         <img src="{{ asset($publikasi_terbaru->gambar) }}" alt="" class="img-fluid rounded" />
         <div class="mb-5">
           <h5>{{$publikasi_terbaru->judul}}</h5>
-          {{ substr($publikasi_terbaru->deskripsi,0,100) }}...
+          {!! substr($publikasi_terbaru->deskripsi,0,100) !!}...
           <a href="{{ route('publikasi.detail',$publikasi_terbaru->slug) }}">Lihat Selengkapnya</a>
         </div>
       </div>
