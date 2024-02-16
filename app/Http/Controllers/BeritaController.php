@@ -14,7 +14,7 @@ class BeritaController extends Controller
         $berita_list = Berita::with("kategori","komentar")->paginate(9);
         $kategori = "Semua";
         if ($request->has('kategori')) {
-            $kategori_opt = KategoriBerita::where('nama_kategori', $request->kategori)->firstOrFail();
+            $kategori_opt = KategoriBerita::where('nama_kategori', urldecode($request->kategori))->firstOrFail();
             $berita_list = Berita::with("kategori","komentar")->where("kategori_berita_id", $kategori_opt->id)->paginate(9);
             $kategori = $request->kategori;
         }

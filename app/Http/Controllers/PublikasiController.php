@@ -15,7 +15,7 @@ class PublikasiController extends Controller
         // dd($publikasi_list);
         $kategori = "Semua";
         if ($request->has('kategori')) {
-            $kategori_opt = KategoriPublikasi::where('nama_kategori', $request->kategori)->firstOrFail();
+            $kategori_opt = KategoriPublikasi::where('nama_kategori', urldecode($request->kategori) )->firstOrFail();
             $publikasi_list = Publikasi::with("kategori","komentar")->where("kategori_publikasi_id", $kategori_opt->id)->paginate(9);
             $kategori = $request->kategori;
         }
