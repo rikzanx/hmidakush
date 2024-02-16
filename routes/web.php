@@ -94,7 +94,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
-
+Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 
 // Tampilan Home
 Route::get('/', 'IndexController@index')->name('index');

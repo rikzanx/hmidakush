@@ -19,6 +19,7 @@
         "laravel/legacy-factories": "^1.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
+        "rap2hpoutre/laravel-log-viewer": "^2.3",
         "spatie/db-dumper": "^3.4",
         "spatie/laravel-backup": "^7.8"
     },
