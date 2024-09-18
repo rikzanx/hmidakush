@@ -28,6 +28,10 @@
   <!-- Customized Bootstrap Stylesheet -->
   <link href="{{ asset('template/css/style.css')}}" rel="stylesheet" />
   <link href="{{ asset('template/css/newstyle.css')}}" rel="stylesheet" />
+
+<!-- Google adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7328519214074833"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
