@@ -50,7 +50,7 @@ class AdminSambutanController extends Controller
         $sambutan = Sambutan::first();
         if($request->hasFile('gambar')) {
             $uploadFolder = "img/";
-            $image = $request->konten;
+            $image = $request->gambar;
             $imageName = time() . '-' . $image->getClientOriginalName();
             $image->move(public_path($uploadFolder), $imageName);
             $image_link = $uploadFolder . $imageName;
