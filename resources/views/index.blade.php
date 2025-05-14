@@ -78,9 +78,9 @@
         @if($sambutan)
         <h1 class="text-white">{{ $sambutan->nama }}</h1>
         <p class="mb-4 text-white">- {{$sambutan->jabatan}}</p>
-        <p class="text-white">
+        <div class="text-white">
           {!! $sambutan->isi !!}
-        </p>
+        </div>
         @endif
 
       </div>
