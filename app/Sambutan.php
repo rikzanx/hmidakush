@@ -13,6 +13,7 @@ class Sambutan extends Model
     [
         'nama',
         'jabatan',
-        'isi'
+        'isi',
+        'gambar'
     ];
 }

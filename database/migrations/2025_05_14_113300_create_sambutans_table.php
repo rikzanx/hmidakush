@@ -18,6 +18,7 @@ class CreateSambutansTable extends Migration
             $table->string('nama');
             $table->string('jabatan');
             $table->longText('isi');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
