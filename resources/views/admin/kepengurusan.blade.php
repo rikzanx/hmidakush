@@ -22,7 +22,7 @@
                 <img src="{{ asset($kepengurusan->konten) }}" alt="">
                 <div class="form-group">
                     <label>Foto</label>
-                    <input type="file" name="konten" id="konten">
+                    <input type="file" class="form-control" name="konten" id="konten">
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-success" value="Simpan">

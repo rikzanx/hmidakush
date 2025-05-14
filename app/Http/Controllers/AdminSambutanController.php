@@ -40,19 +40,25 @@ class AdminSambutanController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            "konten" => "required",
+            "nama" => "required",
+            "jabatan" => "required",
+            "isi" => "required",
         ]);
         if ($validator->fails()) {
             return redirect()->route("admin.sambutan.index")->with('danger', $validator->errors()->first());
         }
-        $uploadFolder = "img/";
-        $image = $request->konten;
-        $imageName = time() . '-' . $image->getClientOriginalName();
-        $image->move(public_path($uploadFolder), $imageName);
-        $image_link = $uploadFolder . $imageName;
-
         $sambutan = Sambutan::first();
-        $sambutan->konten = $image_link;
+        if($request->hasFile('gambar')) {
+            $uploadFolder = "img/";
+            $image = $request->konten;
+            $imageName = time() . '-' . $image->getClientOriginalName();
+            $image->move(public_path($uploadFolder), $imageName);
+            $image_link = $uploadFolder . $imageName;
+            $sambutan->gambar = $image_link;
+        }
+        $sambutan->nama = $request->nama;
+        $sambutan->jabatan = $request->jabatan;
+        $sambutan->isi = $request->isi;
         $sambutan->save();
 
         return redirect()->route("admin.sambutan.index")->with('success', 'Data berhasil ditambahkan');

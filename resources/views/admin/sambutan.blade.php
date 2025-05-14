@@ -32,11 +32,11 @@
                     <textarea class="form-control" id="editor" name="isi"
                         placeholder="Isi Sambutan .." rows="5">{{ $sambutan->isi }}</textarea>
                 </div>
-                <img src="{{ asset($sambutan->gambar) }}" alt="">
+                <img src="{{ asset($sambutan->gambar) }}" class="img-fluid" alt="">
                 <br>
                 <div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" name="gambar" id="gambar">
+                    <label>Foto (kosongi foto jika tidak ingin diganti)</label>
+                    <input type="file" class="form-control" name="gambar" id="gambar">
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-success" value="Simpan">
