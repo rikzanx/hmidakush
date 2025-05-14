@@ -75,17 +75,13 @@
             <span class="px-2">Sambutan</span>
           </p>
         </div>
-        <h1 class="text-white">M Iqbal Dzulkarnain</h1>
-        <p class="mb-4 text-white">- formateur HMI Komisariat Dakwah-Ushuluddin cabang Kudus</p>
+        @if($sambutan)
+        <h1 class="text-white">{{ $sambutan->nama }}</h1>
+        <p class="mb-4 text-white">- {{$sambutan->jabatan}}</p>
         <p class="text-white">
-          Assalamualaikum Wr Wb
-          <br>
-          Selamat datang untuk para pengunjung di website HMI komisariat Dakwah-Ushuluddin 
-          cabang Kudus, adanya website ini merupakan bentuk realisasi visi komisariat HMI 
-          dakwah suludin untuk menjadikan organisasi yang dapat adaptif terhadap perkembangan 
-          zaman. Website ini akan mengakomodir segala informasi tentang kegiatan komisariat dakwah Ushuluddin cabang Kudus, yang mana  disini juga tempat menuangkan kreativitas dari kader-kader terbaik komisariat HMI dakwah usuludin. Harapannya untuk menopang masa depan yang memiliki keberadaban yang inklusif HMI dapat mewarnai tata nilai yang menopang perkembangan zaman melalui kawah Candradimuka yang melahirkan kader-kader yang memiliki semangat keislaman & Keindonesiaan yang tentunya sadar akan perang dan tanggung jawab sebagai kader umat & bangsa.
-          <br>
+          {!! $berita->isi !!}
         </p>
+        @endif
 
       </div>
       <div class="col-lg-5">
