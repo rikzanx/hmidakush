@@ -11,7 +11,7 @@
       </div>
       <div class="card-body">
 
-            <form method="post" action="{{ route('admin.management.store') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.kepengurusan.store') }}" enctype="multipart/form-data">
 
                 {{ csrf_field() }}
                 @if(session()->has('danger'))
