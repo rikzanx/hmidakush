@@ -52,6 +52,13 @@
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item ">
+                <a class="nav-link {{ Nav::isRoute('admin.sambutan.index') }}"
+                    href="{{ route('admin.sambutan.index') }}">
+                    <span class="fas fa-fw fa-bars"></span>
+                    <span class="sidenav-normal">Sambutan</span>
+                </a>
+            </li>
+            <li class="nav-item ">
                 <a class="nav-link {{ Nav::isRoute('admin.kepengurusan.index') }}"
                     href="{{ route('admin.kepengurusan.index') }}">
                     <span class="fas fa-fw fa-bars"></span>

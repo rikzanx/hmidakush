@@ -84,6 +84,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('admin/management', 'AdminUserController', [
         'as' => 'admin'
     ]);
+    Route::resource('admin/sambutan','AdminSambutanController',[
+        'as' => 'admin'
+    ]);
     Route::resource('admin/kepengurusan','AdminKepengurusanController',[
         'as' => 'admin'
     ]);
