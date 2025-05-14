@@ -79,7 +79,7 @@
         <h1 class="text-white">{{ $sambutan->nama }}</h1>
         <p class="mb-4 text-white">- {{$sambutan->jabatan}}</p>
         <p class="text-white">
-          {!! $berita->isi !!}
+          {!! $sambutan->isi !!}
         </p>
         @endif
 
