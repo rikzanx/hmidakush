@@ -14,8 +14,10 @@ class AdminKepengurusanController extends Controller
      */
     public function index()
     {
-        
-        return view('admin.kepengurusan');
+        $kepengurusan = Kepengurusan::first();
+        return view('admin.kepengurusan',[
+            'kepengurusan' => $kepengurusan
+        ]);
     }
 
     /**

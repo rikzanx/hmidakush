@@ -19,14 +19,10 @@
                     {{ session()->get("danger")}}
                 </div>
                 @endif
-
+                <img src="{{ asset($kepengurusan->konten) }}" alt="">
                 <div class="form-group">
-                    <label>Periode</label>
-                    <input type="text" name="periode" class="form-control" placeholder="2022/2023">
-                </div>
-                <div class="form-group">
-                    <label>Isi</label>
-                    <textarea name="konten" id="editor" cols="30" rows="10"></textarea>
+                    <label>Foto</label>
+                    <input type="file" name="konten" id="konten">
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-success" value="Simpan">
