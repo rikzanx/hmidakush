@@ -38,7 +38,23 @@ class AdminKepengurusanController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $validator = Validator::make($request->all(), [
+            "konten" => "required",
+        ]);
+        if ($validator->fails()) {
+            return redirect()->route("admin.kepengurusan.index")->with('danger', $validator->errors()->first());
+        }
+        $uploadFolder = "img/";
+        $image = $request->gambar;
+        $imageName = time() . '-' . $image->getClientOriginalName();
+        $image->move(public_path($uploadFolder), $imageName);
+        $image_link = $uploadFolder . $imageName;
+
+        $kepengurusan = Kepengurusan::first();
+        $kepengurusan->konten = $image_link;
+        $kepengurusan->save();
+
+        return redirect()->route("admin.kepengurusan.index")->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
