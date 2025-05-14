@@ -66,6 +66,7 @@
 <!-- About End -->
 
 <!-- Sambutan Start -->
+@if($sambutan)
 <div class="container-fluid py-5 bg-secondary">
   <div class="container">
     <div class="row align-items-center">
@@ -75,23 +76,22 @@
             <span class="px-2">Sambutan</span>
           </p>
         </div>
-        @if($sambutan)
         <h1 class="text-white">{{ $sambutan->nama }}</h1>
         <p class="mb-4 text-white">- {{$sambutan->jabatan}}</p>
         <div class="text-white">
           {!! $sambutan->isi !!}
         </div>
-        @endif
-
+        
       </div>
       <div class="col-lg-5">
         <img class="img-fluid rounded mb-5 mb-lg-0"
-          src="{{ asset('img/foto_sambutan2.png') }}" alt="" />
+        src="{{ asset($sambutan->gambar) }}" alt="" />
       </div>
-
+      
     </div>
   </div>
 </div>
+@endif
 <!-- Sambutan End -->
 
 <!-- Publikasi Start -->
