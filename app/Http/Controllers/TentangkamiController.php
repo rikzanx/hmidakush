@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Kepengurusan;
 
 class TentangkamiController extends Controller
 {
@@ -13,7 +14,10 @@ class TentangkamiController extends Controller
 
     public function struktur()
     {
-        return view('frontend.struktur-kepengurusan');
+        $kepengurusan = Kepengurusan::first();
+        return view('frontend.struktur-kepengurusan',[
+            'kepengurusan' => $kepengurusan
+        ]);
     }
 
     

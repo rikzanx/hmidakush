@@ -14,5 +14,5 @@
   </div>
   <!-- Header End -->
 
-  <img style= "width:100%;" class="foto-struktural" src="{{ asset('img/struktur-kepengurusan-2024-2025.png') }}">
+  <img style= "width:100%;" class="foto-struktural" src="{{ asset($kepengurusan->konten) }}">
 @endsection
