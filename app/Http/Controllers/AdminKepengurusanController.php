@@ -46,7 +46,7 @@ class AdminKepengurusanController extends Controller
             return redirect()->route("admin.kepengurusan.index")->with('danger', $validator->errors()->first());
         }
         $uploadFolder = "img/";
-        $image = $request->gambar;
+        $image = $request->konten;
         $imageName = time() . '-' . $image->getClientOriginalName();
         $image->move(public_path($uploadFolder), $imageName);
         $image_link = $uploadFolder . $imageName;
